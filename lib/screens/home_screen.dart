@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/week_days_card.dart';
 import 'package:flutter_application_1/models/meals_of_a_day.dart';
@@ -94,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
 
+              if (!context.mounted) return;
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 "LoginScreen",

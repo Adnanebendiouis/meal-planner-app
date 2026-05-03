@@ -44,13 +44,14 @@ class _SingUpScreenState extends State<SingUpScreen> {
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      FirebaseAuth.instance.currentUser!.sendEmailVerification();
+      await FirebaseAuth.instance.currentUser?.sendEmailVerification();
 
       Fluttertoast.showToast(
         msg: "Account created successfully",
         backgroundColor: Colors.green,
       );
 
+      if (!mounted) return;
       Navigator.pushReplacementNamed(context, "LoginScreen");
 
     } on FirebaseAuthException catch (e) {

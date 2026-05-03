@@ -29,7 +29,7 @@ class MealCard extends StatelessWidget {
                     height: screenHeight * 0.12,
                     width: double.infinity,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => SizedBox(
+                    errorBuilder: (_, _, _) => SizedBox(
                       height: screenHeight * 0.12,
                       child: const Icon(Icons.broken_image, size: 40),
                     ),

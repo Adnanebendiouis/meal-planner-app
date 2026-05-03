@@ -72,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.green,
       );
 
+      if (!mounted) return;
       Navigator.pushReplacementNamed(context, "HomeScreen");
     } on FirebaseAuthException catch (e) {
       Fluttertoast.showToast(

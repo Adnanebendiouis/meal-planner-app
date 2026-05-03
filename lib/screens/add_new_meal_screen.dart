@@ -9,7 +9,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
 class AddNewMealScreen extends StatefulWidget {
-  const AddNewMealScreen({Key? key}) : super(key: key);
+  const AddNewMealScreen({super.key});
 
   @override
   State<AddNewMealScreen> createState() => _AddNewMealScreenState();

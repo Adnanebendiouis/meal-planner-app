@@ -1,3 +1,9 @@
+// ignore: duplicate_ignore
+// ignore: file_names
+// ignore_for_file: file_names, duplicate_ignore
+
+// ignore_for_file: file_names
+
 class Meal {
   String name;
   String imgPath;

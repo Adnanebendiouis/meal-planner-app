@@ -56,6 +56,7 @@ class _MealsOfADayScreenState extends State<MealsOfADayScreen> {
             icon: const Icon(Icons.exit_to_app),
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
+              if (!context.mounted) return;
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 "LoginScreen",

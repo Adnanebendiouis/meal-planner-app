@@ -24,6 +24,7 @@ class IngredientsOfAMealScreen extends StatelessWidget {
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
 
+              if (!context.mounted) return;
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 "LoginScreen",
